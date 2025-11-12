@@ -15,3 +15,33 @@
 .custom-success {
     border: 2px solid #0f014c;
 }
+
+
+/* layout for the box in the facility page */
+#facilities {
+  display: flex;
+  flex-direction: column; /* put boxes vertically */
+  align-items: center;    /* center boxes horizontally */
+  gap: 10px;              /* gaps between boxes */
+  padding: 20px;
+}
+ /* layout for the each box insite the huge facilities box*/
+.fac-box {
+  width: 300px;
+  padding: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #0f0c0c;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.4s ease;
+}
+
+.open {
+  background-color: green !important; /*without importnt, this was not applied */
+}
+
+.closed {
+  background-color: red !important;
+}

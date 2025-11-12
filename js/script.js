@@ -10,3 +10,35 @@ function Info() {
     }
 
   }
+
+
+
+// creating new date and hour object
+const now = new Date();
+// Get 24-hour format (present)
+const currentHour = now.getHours();
+
+// checking if the hours are woring right
+console.log("Current hour:", currentHour);
+const boxes = document.getElementsByClassName("fac-box");
+
+// iterating each box 
+for (let i = 0; i < boxes.length; i++) {
+  const box = boxes[i];
+  const open = parseInt(box.getAttribute("open-h")); //converting to int datatype
+  const close = parseInt(box.getAttribute("close-h"));
+
+  // this is the case when it is whithn the open hours
+  if (currentHour >= open && currentHour < close) {
+    box.classList.add("open"); // this is the way to applty a class style in css sheet
+    box.classList.remove("closed"); // to avoid the overlapping of red and green, detaching the class
+  } 
+  // this is the case when it is not whithin opening hours
+  else {
+    box.classList.add("closed");
+    box.classList.remove("open");
+  }
+};
+
+
+
