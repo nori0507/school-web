@@ -10,3 +10,8 @@
     z-index: 100; /* the box stays above other elements */
     min-width: 350px;
   }
+
+  /* styling to the footer buttons*/
+.custom-success {
+    border: 2px solid #0f014c;
+}
