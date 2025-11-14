@@ -38,15 +38,23 @@
   transition: background-color 0.4s ease;
 }
 
+/* making the facility box green during the opening hour*/
 .open {
   background-color: green !important; /*without importnt, this was not applied */
 }
 
+/* making the facility box red during the closing hour*/
 .closed {
   background-color: red !important;
 }
 
-
+/* style for the major link*/
 .major-link{
     color : blue
+}
+
+/* layout for the school map*/
+#school-map{
+    height: 400px; 
+    width: 100%;
 }
