@@ -13,7 +13,7 @@
         <div style="display: flex; align-items: center; justify-content: center; gap: 15px; ">
             <!-- creating info button and the pop up box-->
             <div style="position: relative;">
-                <button onclick="Info()">Info</button>
+                <button id = 'info' onclick="Info()">Info</button>
                 <!-- Popup box -->
                 <div id="popupBox" >
                     College Address: 1101 West College Ave, Jacksonville, IL, 62650<br>
@@ -30,13 +30,19 @@
     </header>
     <main>
         <!--warm welcome to the top page-->
-        <h1>Welcome to Illinois College!!</h1>
+        <h2>Welcome to Illinois College!!</h2>
 
         <!--map for the school-->
         <div id="map"></div>
 
-        <!--putting the pic of my college-->
-        <img src = './images/ICpic.jpg' alt = "Picture of Illinoci College" width = "45%">
+        <!--gttin pic and the calendar window next to each other-->
+        <div id = "pic-and-event">
+          <!--putting the pic of my college-->
+          <img src = './images/ICpic.jpg' alt = "Picture of Illinoci College" width = "45%">
+          <!--calendar window-->
+          <div id="today-events"></div>
+        </div>
+
 
 
         <!--link for mejors that are offered from the college-->
@@ -51,12 +57,15 @@
     </main>
     <footer>
         <!--buttons so that the user can go to different pages-->
-        <div style="display: flex; justify-content: center; gap: 15px;">
-        <a href = './home.html' class="btn btn-primary mt-4 custom-success">Home</a>
-        <a href = './facilities.html' class="btn btn-primary mt-4 custom-success">Facilities</a>
-        <a href = './events.html' class="btn btn-primary mt-4 custom-success">Events</a>
+        <div id="footer">
+        <a href = './home.html' class="btn btn-primary mt-4 customf">Home</a>
+        <a href = './facilities.html' class="btn btn-primary mt-4 customf">Facilities</a>
+        <a href = './events.html' class="btn btn-primary mt-4 customf">Events</a>
         </div>
     </footer>
+    <!--for calendar-->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/icalendar@6.1.10/index.global.min.js"></script>
 
     <script src = "./js/script.js"></script>
     

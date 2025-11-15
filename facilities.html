@@ -13,7 +13,7 @@
         <div style="display: flex; align-items: center; justify-content: center; gap: 15px; ">
             <!-- creating info button and the pop up box-->
             <div style="position: relative;">
-                <button onclick="Info()">Info</button>
+                <button id = 'info' onclick="Info()">Info</button>
                 <!-- Popup box -->
                 <div id="popupBox" >
                     College Address: 1101 West College Ave, Jacksonville, IL, 62650<br>
@@ -30,6 +30,10 @@
         
     </header>
     <main>
+
+      <h2 id = 'facility-discription'>
+        green box: open | red box: closed
+      </h2>
       <div id="facilities">
       <div class="fac-box" open-h="8" close-h="22">Pool: 8am-10pm</div>
       <div class="fac-box" open-h="8" close-h="22">Gym: 8am-10pm</div>
@@ -44,10 +48,10 @@
     <footer>
         <!--buttons so that the user can go to different pages-->
 
-        <div style="display: flex; justify-content: center; gap: 15px;">
-        <a href = './home.html' class="btn btn-primary mt-4 custom-success">Home</a>
-        <a href = './facilities.html' class="btn btn-primary mt-4 custom-success">Facilities</a>
-        <a href = './events.html' class="btn btn-primary mt-4 custom-success">Events</a>
+        <div id="footer">
+        <a href = './home.html' class="btn btn-primary mt-4 customf">Home</a>
+        <a href = './facilities.html' class="btn btn-primary mt-4 customf">Facilities</a>
+        <a href = './events.html' class="btn btn-primary mt-4 customf">Events</a>
         </div>
     </footer>
 

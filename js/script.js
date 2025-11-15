@@ -12,8 +12,7 @@ function Info() {
   }
 
 
-
-
+// for the facility page facility boxes
 // creating new date and hour object
 const now = new Date();
 // Get 24-hour format (present)
@@ -42,14 +41,39 @@ for (let i = 0; i < boxes.length; i++) {
 };
 
 
-
-
-
-
-
-
-
+// for the google map in the home page
 require('dotenv').config;
+
+// calendar within the home page
+// Using javascript fullcalendar library
+// DOMContentLoaded ensures js file runs after html file
+document.addEventListener("DOMContentLoaded", function () {
+  const calendar = new FullCalendar.Calendar(document.getElementById('today-events'), {
+    initialView: 'timeGridDay', // schedule for 'today' will appear 
+    // connecting the calendar with my google calendar via API
+    googleCalendarApiKey:CALENDAR_API,
+    events: {
+      googleCalendarId:CALENDAR_ID // events from this calendar(from my account) will appear
+    }
+  });
+  calendar.render(); //actually drawing the calendar into the div in the html file
+});
+
+
+
+// calendar within the events page
+document.addEventListener("DOMContentLoaded", function () {
+  const calendar = new FullCalendar.Calendar(document.getElementById('events'), {
+    initialView: 'dayGridMonth', // days in the current month
+    googleCalendarApiKey: CALENDAR_API,
+    events: {
+      googleCalendarId: CALENDAR_ID
+    }
+  });
+  calendar.render();
+});
+
+
 
 // Loading Google Maps script
 function loadGoogleMaps() {
@@ -72,8 +96,6 @@ function loadGoogleMaps() {
     window.initMap = function(){ 
       resolve();
     }
-
-
 
     // whenever get error, reject promise
     script.onerror = function() { 
@@ -108,6 +130,7 @@ async function InteractiveMap() {
 
 // run automatically when the page loads
 window.addEventListener("load", InteractiveMap);
+
 
 
 
