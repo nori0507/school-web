@@ -63,15 +63,23 @@ async function InteractiveMap() {
 // calendar within the home page
 // Using javascript fullcalendar library
 // DOMContentLoaded ensures js file runs after html file
+
+
 document.addEventListener("DOMContentLoaded", function () {
-    const todaycalendar = new FullCalendar.Calendar(document.getElementById('today-events'), {
+  const todayEl = document.getElementById('today-events');
+  //see if the ID exist - other wise donot run, my error was solved after addig this line
+  if (todayEl) {
+    const todaycalendar = new FullCalendar.Calendar(todayEl, {
       initialView: 'timeGridDay',
     });
     todaycalendar.render();
+  }
 
-    const monthcalendar = new FullCalendar.Calendar(document.getElementById('events'), {
+  const eventsEl = document.getElementById('events');
+  if (eventsEl) {
+    const monthcalendar = new FullCalendar.Calendar(eventsEl, {
       initialView: 'dayGridMonth',
     });
     monthcalendar.render();
+  }
 });
-
