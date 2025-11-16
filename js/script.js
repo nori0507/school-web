@@ -58,27 +58,20 @@ async function InteractiveMap() {
     map: map
     });
 }
-  
 
 
 // calendar within the home page
 // Using javascript fullcalendar library
 // DOMContentLoaded ensures js file runs after html file
 document.addEventListener("DOMContentLoaded", function () {
-    const calendar = new FullCalendar.Calendar(document.getElementById('today-events'), {
+    const todaycalendar = new FullCalendar.Calendar(document.getElementById('today-events'), {
       initialView: 'timeGridDay',
     });
-    calendar.render();
-});
+    todaycalendar.render();
 
-
-
-// calendar within the events page
-document.addEventListener("DOMContentLoaded", function () {
-    const calendar = new FullCalendar.Calendar(document.getElementById('events'), {
+    const monthcalendar = new FullCalendar.Calendar(document.getElementById('events'), {
       initialView: 'dayGridMonth',
     });
-    calendar.render();
+    monthcalendar.render();
 });
-
 
