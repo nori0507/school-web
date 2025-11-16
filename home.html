@@ -40,7 +40,7 @@
           <!--putting the pic of my college-->
           <img src = './images/ICpic.jpg' alt = "Picture of Illinoci College" width = "45%">
           <!--calendar window-->
-          <div id="today-events"></div>
+          <div id = 'today-events'></div>
         </div>
 
 
@@ -53,8 +53,7 @@
         </p>
 
 
-
-    </main>
+        
     <footer>
         <!--buttons so that the user can go to different pages-->
         <div id="footer">
@@ -64,10 +63,19 @@
         </div>
     </footer>
     <!--for calendar-->
+    <!-- FullCalendar core -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/icalendar@6.1.10/index.global.min.js"></script>
 
+    <!-- Google Calendar plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.10/index.global.min.js"></script>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGxVGC2Ry0mE31WPOdRYXZAeTho2ttQW8&callback=InteractiveMap&language=en" defer></script>
+    
     <script src = "./js/script.js"></script>
+
+  
+
     
   </body>
 </html>
