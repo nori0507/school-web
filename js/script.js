@@ -63,8 +63,6 @@ async function InteractiveMap() {
 // calendar within the home page
 // Using javascript fullcalendar library
 // DOMContentLoaded ensures js file runs after html file
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const todayEl = document.getElementById('today-events');
   //see if the ID exist - other wise donot run, my error was solved after addig this line
