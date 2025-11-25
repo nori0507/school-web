@@ -3,11 +3,15 @@ body {
   background-image: url('../images/pastel6.png'); /*inserting an image for background*/
   background-repeat: repeat;
   background-size: 100%;
+  font-family: 'Verdana' ;
 }
+
+
 
 /* style for h1*/
 h1{
   font-size: 50px;
+  color: white;
 }
 
 /* style for the footer*/
@@ -15,6 +19,7 @@ h1{
   display: flex; 
   justify-content:center; 
   gap: 15px;
+  background-color: navy;
 }
 
 /* style for h2*/
@@ -24,10 +29,19 @@ h2{
 }
 
 /* style for info button*/
-#info{
-  width: 80px;            
-  height: 40px; 
-  font-size: 28px;
+
+#info {
+  width: 100px;             
+  height: 45px;
+  font-size: 25px;          
+  background-color: white;
+  color: navy;             
+  border-radius: 6px;      
+}
+
+/*':hover' -> this style will be applied when the user moves their mouse pointer over an element. in this case, the button background color would be changed into light grey*/
+#info:hover {
+  background-color: lightgray; /* darker blue on hover */
 }
 
 /* style for the discription*/
@@ -51,12 +65,13 @@ h2{
   }
 
 /* styling to the footer buttons*/
-.customf {
+.custom-footer {
     border: 2px solid #0f014c;
     padding: 10px 20px;    
     font-size: 20px;        
-    width: 200px;          
-    height: 50px;  
+    width: 170px;          
+    height: 50px; 
+    color: navy; 
 }
 
 
@@ -171,9 +186,9 @@ h2{
   font-size: 40px;
   }
 
-  .customf {
+  .custom-footer {
     font-size: 15px;         
-    width: 150px;            
+    width: 130px;            
     height: 40px;  
   }
 
