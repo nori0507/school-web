@@ -102,7 +102,6 @@ h2{
 #map{
     height: 400px; 
     width: 100%;
-    margin-bottom: 20px;
 }
 
 
@@ -142,6 +141,16 @@ h2{
 .fac_explanation{
   font-size: 20px ;
   text-align: center;
+}
+
+/*container for the map, using bootstrap container*/
+.container{
+  background-color: navy;
+  width: 95%;          
+  max-width: 1000px;  
+  margin: 0 auto;      /* center horizontally */
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 /* adjusting everything to the shrunk window */
@@ -202,9 +211,8 @@ h2{
   }
 
   #map{
-    height: 200px; 
+    height: 180px; 
     width: 100%;
-    margin-bottom: 10px;
   } 
 
   #popupBox {
