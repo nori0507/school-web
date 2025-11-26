@@ -120,7 +120,7 @@ h2{
 }
 
 
-
+/*container for the month calsender in the event page*/
 .calendar-container-month {
   background-color: white;
   border: solid navy;
@@ -130,6 +130,7 @@ h2{
   padding: 20px;
 }
 
+/*layout for the month calendar in the event page*/
 #events {
   width: 100%;      
   height: 600px;
@@ -137,6 +138,7 @@ h2{
   margin: 0 auto;
 }
 
+/*container for the today's calendar in the home page*/
 .calendar-container-today {
   background-color: white;
   border: solid navy;

@@ -1,5 +1,5 @@
 // function so that a box pops up when users click the 'Info' button
-function Info() {
+const Info = () => {
     const popup = document.getElementById("popupBox");
     // if the box is hidden, then show it. if it is showed, then hide it.
     if (popup.style.display === "none") {
@@ -9,7 +9,7 @@ function Info() {
         popup.style.display = "none";  
     }
 
-  }
+};
 
 
 // for the facility page facility boxes
@@ -57,65 +57,31 @@ async function InteractiveMap() {
     position: location,
     map: map
     });
-}
+};
+
+
 
 
 // calendar within the home page
 // Using javascript fullcalendar library
 // DOMContentLoaded ensures js file runs after html file
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const todayEl = document.getElementById('today-events');
   //see if the ID exist - other wise donot run, my error was solved after addig this line
   if (todayEl) {
     const todaycalendar = new FullCalendar.Calendar(todayEl, {
       initialView: 'timeGridDay',
       events: [
-        {
-          title: 'Basketball Game',
-          start: '2025-12-06T17:00:00',
-          end: '2025-12-06T19:30:00'
-        },
-        {
-          title: 'Baseball Game',
-          start: '2025-12-07T17:00:00',
-          end: '2025-12-07T19:30:00'
-        },
-        {
-          title: 'Baseball Game',
-          start: '2025-12-08T17:00:00',
-          end: '2025-12-08T19:30:00'
-        },
-        {
-          title: 'Football Game',
-          start: '2025-12-09T17:00:00',
-          end: '2025-12-09T19:30:00'
-        },
-        {
-          title: 'Football Game',
-          start: '2025-12-10T17:00:00',
-          end: '2025-12-10T19:30:00'
-        },
-        {
-          title: 'Baseball Game',
-          start: '2025-12-11T17:00:00',
-          end: '2025-12-11T19:30:00'
-        },
-        {
-          title: 'Tennis Game',
-          start: '2025-12-12T17:00:00',
-          end: '2025-12-12T19:30:00'
-        },
-        {
-          title: 'Basketball Game',
-          start: '2025-12-13T17:00:00',
-          end: '2025-12-13T19:30:00'
-        },
-        {
-          title: 'Track Meet',
-          start: '2025-12-14T17:00:00',
-          end: '2025-12-14T19:30:00'
-        }
-
+        // adding actual events
+        {title: 'Basketball Game', start: '2025-12-06T17:00:00', end: '2025-12-06T19:30:00'},
+        {title: 'Baseball Game', start: '2025-12-07T17:00:00', end: '2025-12-07T19:30:00'},
+        {title: 'Baseball Game', start: '2025-12-08T17:00:00', end: '2025-12-08T19:30:00'},
+        {title: 'Football Game', start: '2025-12-09T17:00:00', end: '2025-12-09T19:30:00'},
+        {title: 'Football Game', start: '2025-12-10T17:00:00', end: '2025-12-10T19:30:00'},
+        {title: 'Baseball Game', start: '2025-12-11T17:00:00', end: '2025-12-11T19:30:00'},
+        {title: 'Tennis Game', start: '2025-12-12T17:00:00', end: '2025-12-12T19:30:00'},
+        {title: 'Basketball Game', start: '2025-12-13T17:00:00', end: '2025-12-13T19:30:00'},
+        {title: 'Track Meet', start: '2025-12-14T17:00:00', end: '2025-12-14T19:30:00'}
       ]
 
     });
@@ -127,23 +93,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const monthcalendar = new FullCalendar.Calendar(eventsEl, {
       initialView: 'dayGridMonth',
       events: [
-        {
-          title: 'Campus Festival',
-          start: '2025-11-15'
-        },
-        {
-          title: 'Basketball Game',
-          start: '2025-11-20'
-        },
-        {
-          title: 'Drum Concert',
-          start: '2025-11-22'
-        },
-        {
-          title: 'Final Exams',
-          start: '2025-12-08',
-          end: '2025-12-13'
-        }
+        //adding actual events
+        {title: 'Campus Festival', start: '2025-11-15'},
+        {title: 'Basketball Game', start: '2025-11-20'},
+        {title: 'Drum Concert', start: '2025-11-22'},
+        {title: 'Final Exams', start: '2025-12-08', end: '2025-12-13'}
       ]
 
     });
